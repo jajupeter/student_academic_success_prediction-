@@ -1,1 +1,1 @@
-# student_academic_success_prediction-
+# student academic success prediction-
