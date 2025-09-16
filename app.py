@@ -7,22 +7,35 @@ from sklearn.ensemble import RandomForestClassifier
 
 
 
-#"""House price Prediction App"""
+#"""Student Success Prediction App"""
 st.write("""
     # :school: Student Success Prediction App
     *This app predicts STEM student Academic success*
     """)
     
+#html_temp = """
+ #   <div style = "background - color: #f0f0f5; padding: 5px">
+  #  <h3 style="color:#666666;text-align:left; line-height: 1.5">
+  #  <p> <b> Choose input parameters by clicking the arrow on the Top left Corner. </b><br/ >
+ #  This Web App will predict student academic success based on performing below or above average  
+ #    once the following (15) parameters are inputed.<br> 
+  #  This is based on Ensemble model - Random Forest Classifier 
+  #  with data from UCI Machine Learning Repository http://archive.ics.uci.edu/ml/datasets/Student+Performance#.</p></h3>
+ #   </div>
 html_temp = """
-    <div style = "background - color: #f0f0f5; padding: 5px">
-    <h3 style="color:#666666;text-align:left; line-height: 1.5">
-    <p> <b> Choose input parameters by clicking the arrow on the Top left Corner. </b><br/ >
-    This Web App will predict student academic success based on performing below or above average  
-     once the following (15) parameters are inputed.<br> 
-    This is based on Ensemble model - Random Forest Classifier 
-    with data from UCI Machine Learning Repository http://archive.ics.uci.edu/ml/datasets/Student+Performance#.</p></h3>
-    </div>
-    
+<div style="background-color: #f9f9f9; padding: 15px; border-radius: 10px; border: 1px solid #ddd;">
+  <h3 style="color:#333333;text-align:left; line-height: 1.6; font-size: 18px;">
+    <b>📌 How to Use This App:</b><br/><br/>
+    ➤ Use the <b>sidebar</b> (click the arrow on the top-left corner if it’s hidden) to input <b>15 key parameters</b> about a student.<br/>
+    ➤ These parameters include background (e.g., age, parental education), lifestyle (e.g., free time, alcohol usage), and academic indicators (e.g., study time, past failures).<br/>
+    ➤ Once all inputs are selected, the app will automatically process your data and display a prediction below.<br/><br/>
+    🔍 The app uses a <b>Random Forest Classifier</b> trained on data from the 
+    <a href="https://archive.ics.uci.edu/ml/datasets/Student+Performance" target="_blank">UCI Student Performance dataset</a> 
+    to estimate whether a student is likely to be <b>academically successful</b> (above average) or <b>not successful</b> (below average).<br/><br/>
+    📊 It also provides the probability score for each possible outcome, giving you a confidence level behind the prediction.
+  </h3>
+</div>
+"""  
     """
 st.markdown(html_temp, unsafe_allow_html=True)
 
